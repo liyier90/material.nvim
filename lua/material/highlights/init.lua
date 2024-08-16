@@ -36,12 +36,12 @@ M.main_highlights.syntax = function()
         StorageClass   = { fg = m.cyan }, -- static, register, volatile, etc.
         Structure      = { fg = s.type },
         SpecialComment = { link = "Comment" }, -- special things inside a comment
-        Constant       = { fg = m.yellow },
+        Constant       = { fg = m.orange },
         Number         = { fg = s.value },
         Character      = { link = "Number" },
         Boolean        = { link = "Number" },
         Float          = { link = "Number" },
-        Statement      = { fg = m.cyan },
+        Statement      = { fg = m.purple },
         Label          = { fg = s.keyword }, -- case, default, etc.
         Operator       = { fg = s.operator },
         Exception      = { fg = m.red },
@@ -51,7 +51,7 @@ M.main_highlights.syntax = function()
         -- PreProc        = { link = "Macro" },
         -- PreCondit   = { link = "Macro" },
         Typedef        = { fg = m.red },
-        Special        = { fg = m.cyan },
+        Special        = { fg = m.violet },
         SpecialChar    = { fg = m.red },
         Tag            = { fg = m.red },
         Delimiter      = { fg = s.operator }, -- ;
@@ -140,7 +140,7 @@ M.main_highlights.treesitter = function()
             ["@string.special"] = { fg = e.fg_dark },
 
             ["@character"] = { link = "Character" },
-		        ["@character.special"] = { link = "SpecialChar" },
+            ["@character.special"] = { link = "SpecialChar" },
 
             ["@diff.plus"]        = { link = "DiffAdd" },
             ["@diff.minus"]       = { link = "DiffDelete" },
@@ -291,15 +291,15 @@ M.main_highlights.editor = function()
         DiffAdd          = { fg = g.added, reverse = true },
         DiffChange       = { fg = g.modified },
         DiffDelete       = { fg = g.removed, reverse = true },
-        DiffText         = { fg = g.modified, reverse = true },
+        DiffText         = { fg = m.orange, reverse = true },
         ModeMsg          = { fg = e.accent }, -- 'showmode' message (e.g., "-- INSERT -- ")
         NonText          = { fg = e.disabled },
         SignColumn       = { fg = e.fg },
         SpecialKey       = { fg = m.purple },
         StatusLine       = { fg = e.fg, bg = e.active },
         StatusLineNC     = { fg = e.disabled, bg = e.bg },
-        StatusLineTerm   = { fg = e.fg, bg = e.active },
-        StatusLineTermNC = { fg = e.disabled, bg = e.bg },
+        StatusLineTerm   = { fg = e.bg, bg = m.green },
+        StatusLineTermNC = { fg = e.disabled, bg = m.darkgreen },
         TabLineFill      = { fg = e.fg },
         TabLineSel       = { fg = e.bg, bg = e.accent },
         TabLine          = { fg = e.fg },
@@ -356,7 +356,7 @@ M.async_highlights.editor = function()
         PmenuSel      = { fg = e.contrast, bg = e.accent }, -- Popup menu: selected item.
         PmenuSbar     = { bg = e.active },
         PmenuThumb    = { fg = e.fg },
-        WildMenu      = { fg = m.orange, bold = true }, -- current match in 'wildmenu' completion
+        WildMenu      = { fg = e.bg, bg = m.cyan }, -- current match in 'wildmenu' completion
         VertSplit     = { fg = e.vsplit },
         WinSeparator  = { fg = e.vsplit },
         diffAdded     = { fg = g.added },

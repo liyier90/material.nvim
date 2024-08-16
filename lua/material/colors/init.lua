@@ -4,18 +4,20 @@ local high_visibility = require "material.util.config".settings.high_visibility
 local colors = {
     ---main colors
     main = {
-        white      = "#EEFFFF",
-        gray       = "#717CB4",
         black      = "#000000",
-        red        = "#FF5370",
-        green      = "#C3E88D",
-        yellow     = "#FFCB6B",
         blue       = "#82AAFF",
-        paleblue   = "#B2CCD6",
+        brown      = "#C17E70",
         cyan       = "#89DDFF",
-        purple     = "#C792EA",
+        gray       = "#717CB4",
+        green      = "#C3E88D",
         orange     = "#F78C6C",
+        paleblue   = "#B2CCD6",
         pink       = "#F07178",
+        purple     = "#C792EA",
+        red        = "#FF5370",
+        violet     = "#BB80B3",
+        white      = "#FFFFFF",
+        yellow     = "#FFCB6B",
 
         darkred    = "#DC6068",
         darkgreen  = "#ABCF76",
@@ -24,6 +26,8 @@ local colors = {
         darkcyan   = "#71C6E7",
         darkpurple = "#B480D6",
         darkorange = "#E2795B",
+
+        none       = "#65738E",
     },
 
     ---colors applied to the editor
@@ -173,13 +177,12 @@ else vim.g.material_style = "oceanic"
     colors.editor.bg_alt       = "#1C2C30"
     colors.editor.fg           = "#EEFFFF"
     colors.editor.fg_dark      = "#7C9EAD"
-    -- colors.editor.fg_dark      = "#4B504F"
-    colors.editor.selection    = "#395B65"
+    colors.editor.selection    = "#3C4B51"
     colors.editor.border       = "#355058"
     colors.editor.line_numbers = "#37474F"
-    colors.editor.highlight    = "#1A2327"-- highlight
+    colors.editor.highlight    = "#1A2327"  -- highlight
     colors.editor.disabled     = "#3E5F64"
-    colors.editor.accent       = "#11BBA3"
+    colors.editor.accent       = colors.main.cyan
     colors.editor.contrast     = "#1E272C"
     colors.editor.active       = "#1A2327"
     colors.syntax.comments     = "#546E7A"
@@ -195,12 +198,12 @@ colors.syntax.operator = colors.main.cyan
 colors.syntax.fn       = colors.main.blue
 colors.syntax.parameter = colors.main.paleblue
 colors.syntax.string   = colors.main.green
-colors.syntax.type     = colors.main.purple
+colors.syntax.type     = colors.main.yellow
 
 ---git colors
 colors.git.added    = colors.main.green
 colors.git.removed  = colors.main.red
-colors.git.modified = colors.main.blue
+colors.git.modified = colors.main.yellow
 
 ---lsp colors
 colors.lsp.warning = colors.main.yellow
