@@ -332,10 +332,10 @@ M.async_highlights.editor = function()
     local editor_hls = {
         NormalNC      = { bg = b.non_current_windows },
         FloatBorder   = { fg = e.border, bg = b.floating_windows },
-        SpellBad      = { fg = m.red, italic = true, undercurl = true },
-        SpellCap      = { fg = m.blue, italic = true, undercurl = true },
-        SpellLocal    = { fg = m.cyan, italic = true, undercurl = true },
-        SpellRare     = { fg = m.purple, italic = true, undercurl = true },
+        SpellBad      = { fg = m.red, italic = true, underline = true },
+        SpellCap      = { fg = m.blue, italic = true, underline = true },
+        SpellLocal    = { fg = m.cyan, italic = true, underline = true },
+        SpellRare     = { fg = m.purple, italic = true, underline = true },
         Warnings      = { fg = m.yellow },
         healthError   = { fg = l.error },
         healthSuccess = { fg = m.green },
@@ -398,16 +398,16 @@ M.async_highlights.load_lsp = function()
 
         DiagnosticFloatingError    = { link = "DiagnosticError" },
         DiagnosticSignError        = { link = "DiagnosticError" },
-        DiagnosticUnderlineError   = { undercurl = true, sp = l.error },
+        DiagnosticUnderlineError   = { underline = true, sp = l.error },
         DiagnosticFloatingWarn     = { link = "DiagnosticWarn" },
         DiagnosticSignWarn         = { link = "DiagnosticWarn" },
-        DiagnosticUnderlineWarn    = { undercurl = true, sp = l.warning },
+        DiagnosticUnderlineWarn    = { underline = true, sp = l.warning },
         DiagnosticFloatingInfo     = { link = "DiagnosticInfo" },
         DiagnosticSignInfo         = { link = "DiagnosticInfo" },
-        DiagnosticUnderlineInfo    = { undercurl = true, sp = l.info },
+        DiagnosticUnderlineInfo    = { underline = true, sp = l.info },
         DiagnosticFloatingHint     = { link = "DiagnosticHint" },
         DiagnosticSignHint         = { link = "DiagnosticHint" },
-        DiagnosticUnderlineHint    = { undercurl = true, sp = l.hint },
+        DiagnosticUnderlineHint    = { underline = true, sp = l.hint },
         LspReferenceText           = { bg = e.selection }, -- used for highlighting "text" references
         LspReferenceRead           = { link = "LspReferenceText" }, -- used for highlighting "read" references
         LspReferenceWrite          = { link = "LspReferenceText" }, -- used for highlighting "write" references
