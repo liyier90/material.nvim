@@ -5,19 +5,19 @@ local colors = {
     ---main colors
     main = {
         black      = "#000000",
-        blue       = "#82AAFF",
-        brown      = "#C17E70",
-        cyan       = "#89DDFF",
+        blue       = "#82AAFF",  -- orig
+        brown      = "#C17E70",  -- orig
+        cyan       = "#89DDFF",  -- orig
         gray       = "#717CB4",
-        green      = "#C3E88D",
-        orange     = "#F78C6C",
-        paleblue   = "#B2CCD6",
-        pink       = "#F07178",
-        purple     = "#C792EA",
-        red        = "#FF5370",
+        green      = "#C3E88D",  -- orig
+        orange     = "#F78C6C",  -- orig
+        paleblue   = "#B2CCD6",  -- orig
+        pink       = "#F07178",  -- orig
+        purple     = "#C792EA",  -- orig
+        red        = "#FF5370",  -- orig
         violet     = "#BB80B3",
-        white      = "#FFFFFF",
-        yellow     = "#FFCB6B",
+        white      = "#FFFFFF",  -- orig
+        yellow     = "#FFCB6B",  -- orig
 
         darkred    = "#DC6068",
         darkgreen  = "#ABCF76",
@@ -32,13 +32,13 @@ local colors = {
 
     ---colors applied to the editor
     editor = {
-        link   = "#80CBC4",
-        cursor = "#FFCC00",
-        title  = "#EEFFFF",
+        link   = "#80CBC4",  -- orig
+        cursor = "#FFCC00",  -- orig
+        title  = "#EEFFFF",  -- orig
     },
 
     lsp = {
-        error = "#FF5370",
+        error = "#FF5370",  -- orig
     },
 
     syntax = {},
@@ -173,19 +173,19 @@ elseif vim.g.material_style == "deep ocean" then
 else vim.g.material_style = "oceanic"
     -- Oceanic theme style
 
-    colors.editor.bg           = "#263238"
+    colors.editor.bg           = "#263238"  -- orig
     colors.editor.bg_alt       = "#1C2C30"
-    colors.editor.fg           = "#EEFFFF"
+    colors.editor.fg           = "#FFFFFF"  -- orig
     colors.editor.fg_dark      = "#7C9EAD"
     colors.editor.selection    = "#3C4B51"
     colors.editor.border       = "#355058"
-    colors.editor.line_numbers = "#37474F"
-    colors.editor.highlight    = "#1A2327"  -- highlight
+    colors.editor.line_numbers = "#37474F"  -- orig
+    colors.editor.highlight    = "#1A2327"
     colors.editor.disabled     = "#3E5F64"
     colors.editor.accent       = colors.main.cyan
     colors.editor.contrast     = "#1E272C"
     colors.editor.active       = "#1A2327"
-    colors.syntax.comments     = "#546E7A"
+    colors.syntax.comments     = "#546E7A"  -- orig
 
 end
 

@@ -28,9 +28,9 @@ M.main_highlights.syntax = function()
         Identifier     = { fg = s.variable },
         Comment        = { fg = s.comments },
         Keyword        = { fg = s.keyword },
-        Conditional    = { fg = s.keyword },
+        Conditional    = { fg = m.cyan },
         Function       = { fg = s.fn },
-        Repeat         = { fg = s.keyword },
+        Repeat         = { fg = s.cyan },
         String         = { fg = s.string },
         Type           = { fg = s.type },
         StorageClass   = { fg = m.cyan }, -- static, register, volatile, etc.
@@ -44,7 +44,7 @@ M.main_highlights.syntax = function()
         Statement      = { fg = m.purple },
         Label          = { fg = s.keyword }, -- case, default, etc.
         Operator       = { fg = s.operator },
-        Exception      = { fg = m.red },
+        Exception      = { fg = m.cyan },
         Macro          = { fg = m.cyan },
         Include        = { link = "Macro" },
         -- Define         = { link = "Macro" },
@@ -98,10 +98,10 @@ M.main_highlights.treesitter = function()
 
             ["@variable"]           = { link = "Identifier" },
             ["@variable.builtin"]   = { link = "@keyword" },
+            ["@variable.member"]    = { fg = m.pink }, -- Fields
+            ["@variable.parameter"] = { link = "Identifier" },
             -- ["@field"]              = { fg = e.fg_dark },
             ["@property"]           = { fg = e.fg_dark },
-            ["@variable.parameter"] = { link = "Identifier" },
-            ["@variable.member"]    = { fg = e.fg_dark }, -- Fields
             ["@string.special.symbol"] = { fg = m.yellow },
 
             ["@function"]         = { link = "Function" },
@@ -114,29 +114,29 @@ M.main_highlights.treesitter = function()
 
             ["@constructor"]      = { fg = m.blue },
 
-            ["@keyword"]           = { fg = m.cyan },
-            ["@keyword.coroutine"] = { fg = m.cyan, italic = true },
-            ["@keyword.operator"]  = { link = "@keyword" },
-            ["@keyword.return"]    = { link = "@keyword" },
-            ["@keyword.function"]  = { link = "@keyword" },
-            ["@keyword.export"]    = { link = "@keyword" },
-
-            ["@keyword.conditional"]       = { link = "Conditional" },
-            ["@keyword.repeat"]            = { link = "Repeat" },
-            ["@keyword.import"]            = { link = "Include" },
-            ["@keyword.exception"]         = { link = "Exception" },
+            ["@keyword"]             = { fg = m.cyan },
+            ["@keyword.conditional"] = { link = "Conditional" },
+            ["@keyword.coroutine"]   = { fg = m.cyan, italic = true },
+            -- ["@keyword.exception"]   = { link = "Exception" },
+            ["@keyword.exception"]   = { link = "@keyword" },
+            ["@keyword.export"]      = { link = "@keyword" },
+            ["@keyword.function"]    = { fg = m.purple },
+            ["@keyword.import"]      = { link = "Include" },
+            ["@keyword.operator"]    = { link = "@keyword" },
+            ["@keyword.repeat"]      = { link = "@keyword" },
+            ["@keyword.return"]      = { link = "@keyword" },
 
             ["@constant"]         = { fg = m.yellow },
-            ["@constant.builtin"] = { fg = m.yellow },
+            ["@constant.builtin"] = { fg = m.cyan },
             ["@constant.macro"]   = { fg = m.cyan },
 
             ["@keyword.directive"] = { fg = m.cyan },
-            ["@macro"]     = { fg = m.cyan },
-            ["@module"] = { fg = m.yellow },
+            ["@macro"]             = { fg = m.cyan },
+            ["@module"]            = { fg = m.yellow },
 
             ["@string"]         = { link = "String" },
             ["@string.escape"]  = { fg = e.fg_dark },
-            ["@string.regexp"]   = { fg = m.yellow },
+            ["@string.regexp"]   = { fg = m.cyan },
             ["@string.special"] = { fg = e.fg_dark },
 
             ["@character"] = { link = "Character" },
@@ -149,6 +149,7 @@ M.main_highlights.treesitter = function()
 
             -- ["@structure"]             = { fg = s.type },
             ["@keyword.storage"]          = { fg = m.cyan },
+            ["@keyword.type"]          = { fg = m.purple },
 
             ["@label"]                  = { fg = m.yellow },
             ["@punctuation"]            = { fg = m.cyan },
@@ -415,16 +416,16 @@ M.async_highlights.load_lsp = function()
         LspInlayHint               = { italic = true, fg = s.comments },
         LspInfoBorder              = { fg = e.border },
 
+        ["@lsp.type.boolean"]                      = { link = "@boolean" },
         ["@lsp.type.builtinType"]                  = { link = "@type.builtin" },
         ["@lsp.type.comment"]                      = { link = "@comment" },
-        ["@lsp.type.boolean"]                      = { link = "@boolean" },
+        ["@lsp.type.decorator"]                    = { link = "@operator" },
         ["@lsp.type.enum"]                         = { link = "@type" },
         ["@lsp.type.enumMember"]                   = { link = "@constant" },
         ["@lsp.type.escapeSequence"]               = { link = "@string.escape" },
         ["@lsp.type.formatSpecifier"]              = { link = "@punctuation" },
         ["@lsp.type.interface"]                    = { link = "Identifier" },
         ["@lsp.type.keyword"]                      = { link = "@keyword" },
-        ['@lsp.type.class']                        = { link = "@type" },
         ["@lsp.type.namespace"]                    = { link = "@module" },
         ["@lsp.type.number"]                       = { link = "@number" },
         ["@lsp.type.operator"]                     = { link = "@operator" },
@@ -433,6 +434,7 @@ M.async_highlights.load_lsp = function()
         ["@lsp.type.selfKeyword"]                  = { link = "@variable.builtin" },
         ["@lsp.type.typeAlias"]                    = { link = "@type" },
         ["@lsp.type.unresolvedReference"]          = { link = "@error" },
+        ['@lsp.type.class']                        = { link = "@type" },
         ["@lsp.typemod.class.defaultLibrary"]      = { link = "@type.builtin" },
         ["@lsp.typemod.enum.defaultLibrary"]       = { link = "@type.builtin" },
         ["@lsp.typemod.enumMember.defaultLibrary"] = { link = "@constant.builtin" },
