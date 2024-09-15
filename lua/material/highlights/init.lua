@@ -39,7 +39,7 @@ M.main_highlights.syntax = function()
         Constant       = { fg = m.orange },
         Number         = { fg = s.value },
         Character      = { link = "Number" },
-        Boolean        = { link = "Number" },
+        Boolean        = { link = "Conditional" },
         Float          = { link = "Number" },
         Statement      = { fg = m.purple },
         Label          = { fg = s.keyword }, -- case, default, etc.
@@ -49,12 +49,12 @@ M.main_highlights.syntax = function()
         Include        = { link = "Macro" },
         -- Define         = { link = "Macro" },
         -- PreProc        = { link = "Macro" },
-        -- PreCondit   = { link = "Macro" },
+        -- PreCondit      = { link = "Macro" },
         Typedef        = { fg = m.red },
         Special        = { fg = m.violet },
         SpecialChar    = { fg = m.red },
         Tag            = { fg = m.red },
-        Delimiter      = { fg = s.operator }, -- ;
+        Delimiter      = { fg = s.operator },
         Debug          = { fg = m.red },
         htmlLink       = { fg = e.link, underline = true },
         -- htmlH1         = { fg = m.cyan, bold = true },
@@ -136,7 +136,7 @@ M.main_highlights.treesitter = function()
 
             ["@string"]         = { link = "String" },
             ["@string.escape"]  = { fg = e.fg_dark },
-            ["@string.regexp"]   = { fg = m.cyan },
+            ["@string.regexp"]  = { fg = m.cyan },
             ["@string.special"] = { fg = e.fg_dark },
 
             ["@character"] = { link = "Character" },
