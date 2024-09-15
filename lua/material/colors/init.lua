@@ -8,7 +8,7 @@ local colors = {
         blue       = "#82AAFF",  -- orig
         brown      = "#C17E70",  -- orig
         cyan       = "#89DDFF",  -- orig
-        gray       = "#717CB4",
+        gray       = "#546E7A",  -- orig
         green      = "#C3E88D",  -- orig
         orange     = "#F78C6C",  -- orig
         paleblue   = "#B2CCD6",  -- orig
@@ -27,7 +27,7 @@ local colors = {
         darkpurple = "#B480D6",
         darkorange = "#E2795B",
 
-        none       = "#65738E",
+        none       = "#65737E",  -- orig
     },
 
     ---colors applied to the editor
@@ -174,10 +174,10 @@ else vim.g.material_style = "oceanic"
     -- Oceanic theme style
 
     colors.editor.bg           = "#263238"  -- orig
-    colors.editor.bg_alt       = "#1C2C30"
+    colors.editor.bg_alt       = "#192227"  -- orig
     colors.editor.fg           = "#FFFFFF"  -- orig
     colors.editor.fg_dark      = "#7C9EAD"
-    colors.editor.selection    = "#3C4B51"
+    colors.editor.selection    = "#303C41"  -- orig
     colors.editor.border       = "#355058"
     colors.editor.line_numbers = "#37474F"  -- orig
     colors.editor.highlight    = "#1A2327"
@@ -185,20 +185,20 @@ else vim.g.material_style = "oceanic"
     colors.editor.accent       = colors.main.cyan
     colors.editor.contrast     = "#1E272C"
     colors.editor.active       = "#1A2327"
-    colors.syntax.comments     = "#546E7A"  -- orig
+    colors.syntax.comments     = colors.main.gray
 
 end
 
 ---syntax colors
-colors.syntax.variable = colors.editor.fg
-colors.syntax.field    = colors.editor.fg
-colors.syntax.keyword  = colors.main.purple
-colors.syntax.value    = colors.main.orange
-colors.syntax.operator = colors.main.cyan
-colors.syntax.fn       = colors.main.blue
+colors.syntax.variable  = colors.editor.fg
+colors.syntax.field     = colors.editor.fg
+colors.syntax.keyword   = colors.main.purple
+colors.syntax.value     = colors.main.orange
+colors.syntax.operator  = colors.main.cyan
+colors.syntax.fn        = colors.main.blue
 colors.syntax.parameter = colors.main.paleblue
-colors.syntax.string   = colors.main.green
-colors.syntax.type     = colors.main.yellow
+colors.syntax.string    = colors.main.green
+colors.syntax.type      = colors.main.yellow
 
 ---git colors
 colors.git.added    = colors.main.green
@@ -211,8 +211,8 @@ colors.lsp.info    = colors.main.paleblue
 colors.lsp.hint    = colors.main.purple
 
 ---contrasted backgrounds
-colors.backgrounds.sidebars            = colors.editor.bg
-colors.backgrounds.floating_windows    = colors.editor.bg
+colors.backgrounds.sidebars            = colors.editor.bg_alt
+colors.backgrounds.floating_windows    = colors.editor.bg_alt
 colors.backgrounds.non_current_windows = colors.editor.bg
 colors.backgrounds.cursor_line         = colors.editor.active
 
