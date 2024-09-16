@@ -351,7 +351,7 @@ M.async_highlights.editor = function()
         -- IncSearch     = { fg = e.title, bg = e.selection, underline = true },
         Search        = { fg = e.bg, bg = e.title },
         IncSearch     = { fg = e.bg, bg = e.title, bold = true },
-        CurSearch     = { fg = e.bg, bg = m.yellow, bold = true },
+        CurSearch     = { fg = e.bg, bg = m.brown, bold = true },
         MoreMsg       = { fg = e.accent },
         Pmenu         = { fg = e.fg, bg = e.border }, -- popup menu
         PmenuSel      = { fg = e.contrast, bg = e.accent }, -- Popup menu: selected item.
