@@ -18,7 +18,7 @@ M.load = function()
         TelescopePreviewTitle  = { link = "TelescopePromptTitle" },
         TelescopePreviewDirectory = { fg = e.fg_dark },
         TelescopeSelectionCaret = { fg = e.title, bg = e.active },
-        TelescopeSelection      = { fg = e.title, bg = e.active },
+        TelescopeSelection      = { fg = e.fg_dark, bg = e.active },
         TelescopeMultiSelection = { fg = m.yellow },
         TelescopeMatching       = { bold = true },
     }
