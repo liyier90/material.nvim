@@ -184,7 +184,7 @@ else vim.g.material_style = "oceanic"
     colors.editor.disabled     = "#3E5F64"
     colors.editor.accent       = colors.main.cyan
     colors.editor.contrast     = "#1E272C"
-    colors.editor.active       = "#1A2327"
+    colors.editor.active       = "#110F1B"
     colors.syntax.comments     = colors.main.gray
 
 end
